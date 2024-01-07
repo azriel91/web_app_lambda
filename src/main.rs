@@ -13,7 +13,8 @@ async fn function_handler(event: Request) -> Result<Response<Body>, Error> {
     let message = format!("Hello {who}, this is an AWS Lambda HTTP request");
 
     // Return something that implements IntoResponse.
-    // It will be serialized to the right response event automatically by the runtime
+    // It will be serialized to the right response event automatically by the
+    // runtime
     let resp = Response::builder()
         .status(200)
         .header("content-type", "text/html")
